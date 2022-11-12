@@ -2,7 +2,7 @@ const express = require('express');
 const { initialDatabase } = require('../config/db');
 const { initViewEngine } = require('../config/hbs');
 const cookieParser = require('cookie-parser');
-const router = require('../router');
+const router = require('./router');
 const app = express();
 const port = 3000;
 
