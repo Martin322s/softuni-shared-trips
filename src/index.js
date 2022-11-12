@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 initViewEngine(app);
-app.use(express.static('public'));
+app.use('/static', express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(router);
