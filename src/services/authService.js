@@ -32,7 +32,6 @@ exports.loginUser = async ({ email, password }) => {
     try {
         const user = await User.findOne({ email });
         const isValid = await bcrypt.compare(password, user.password);
-        console.log(user, isValid);
 
         if (isValid) {
             return user;

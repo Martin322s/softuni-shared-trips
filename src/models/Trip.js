@@ -3,46 +3,46 @@ const mongoose = require('mongoose');
 const tripSchema = new mongoose.Schema({
     startPoint: {
         type: String,
-        require: true
+        required: true
     },
     endPoint: {
         type: String,
-        require: true
+        required: true
     },
     date: {
         type: String,
-        require: true
+        required: true
     },
     time: {
         type: String,
-        require: true
+        required: true
     },
     carImage: {
         type: String,
-        require: true
+        required: true
     },
     carBrand: {
         type: String,
-        require: true
+        required: true
     },
     seats: {
         type: Number,
-        require: true
+        required: true
     },
     price: {
         type: Number,
-        require: true
+        required: true
     },
     description: {
         type: String,
-        require: true
+        required: true
     },
     owner: {
-        type: mongooseTypes.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: 'User'
     },
     buddies: [{
-        type: mongooseTypes.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: 'User'
     }]
 });
