@@ -33,4 +33,23 @@ router.get('/profile', (req, res) => {
     res.render('trips/profile');
 });
 
+router.get('/details/:tripId', async (req, res) => {
+    const tripId = req.params.tripId;
+    const trip = await tripService.getOne(tripId);
+    const isOwner = trip.owner._id == req.user;
+    res.render('trips/trip-details', { 
+        startPoint: trip.startPoint,
+        endPoint: trip.endPoint,
+        date: trip.date,
+        time: trip.time,
+        carImage: trip.carImage,
+        carBrand: trip.carBrand,
+        seats: trip.seats,
+        price: trip.price,
+        description: trip.description,
+        owner: trip.owner.email,
+        creator: isOwner
+     });
+});
+
 module.exports = router;
