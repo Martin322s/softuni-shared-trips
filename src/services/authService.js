@@ -28,7 +28,25 @@ exports.registerUser = async ({ email, password, gender }) => {
     }
 }
 
-exports.genderateToken = async (user) => {
+exports.loginUser = async ({ email, password }) => {
+    try {
+        const user = await User.findOne({ email });
+        const isValid = await bcrypt.compare(password, user.password);
+        console.log(user, isValid);
+
+        if (isValid) {
+            return user;
+        } else {
+            throw {
+                message: 'Invalid email or password!'
+            }
+        }
+    } catch (err) {
+        return err.message;
+    }
+}
+
+exports.generateToken = async (user) => {
     const token = jwtSign({ _id: user._id, email: user.email }, SECRET, { expiresIn: '2d' });
     return token;
 }

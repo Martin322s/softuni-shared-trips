@@ -9,7 +9,7 @@ exports.auth = async (req, res, next) => {
     if (token) {
         const decodedToken = await jwtVerify(token, SECRET);
         req.user = decodedToken._id;
-        req.email = decodedToken.email;
+        res.locals.email = decodedToken.email;
         res.locals.user = decodedToken._id;
         next();
     } else {
