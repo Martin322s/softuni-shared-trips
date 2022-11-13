@@ -38,6 +38,7 @@ router.get('/details/:tripId', async (req, res) => {
     const trip = await tripService.getOne(tripId);
     const isOwner = trip.owner._id == req.user;
     res.render('trips/trip-details', { 
+        _id: trip._id,
         startPoint: trip.startPoint,
         endPoint: trip.endPoint,
         date: trip.date,
@@ -50,6 +51,12 @@ router.get('/details/:tripId', async (req, res) => {
         owner: trip.owner.email,
         creator: isOwner
      });
+});
+
+router.get('/details/:tripId/delete', async (req, res) => {
+    const tripId = req.params.tripId;
+    await tripService.deleteTrip(tripId);
+    res.redirect('/trips/shared');
 });
 
 module.exports = router;
