@@ -2,8 +2,9 @@ const tripService = require('../services/tripService');
 
 const router = require('express').Router();
 
-router.get('/shared', (req, res) => {
-    res.render('trips/shared-trips');
+router.get('/shared', async (req, res) => {
+    const trips = await tripService.getAll();
+    res.render('trips/shared-trips', { trips });
 });
 
 router.get('/offer', (req, res) => {
