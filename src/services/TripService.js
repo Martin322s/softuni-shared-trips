@@ -9,5 +9,6 @@ exports.editTrip = async (tripId, tripData) => await Trip.findByIdAndUpdate({ _i
 exports.getAuthor = async (authorId) => await User.findById(authorId);
 exports.addOffer = async (offer, authorId) => await User.findByIdAndUpdate({ _id: authorId }, { $push: { tripsHistory: offer } });
 exports.myOffers = async (userId) => await Trip.find().where({ owner: userId });
-exports.joinTrip = async (tripId, userId) => await Trip.findByIdAndUpdate({ _id: tripId }, { $push: { buddies: userId }});
+exports.joinTrip = async (tripId, userId) => await Trip.findByIdAndUpdate({ _id: tripId }, { $push: { buddies: userId } });
 exports.editSeats = async (tripId, seats) => await Trip.findByIdAndUpdate({ _id: tripId }, { seats: seats });
+exports.getAllPassagers = async (tripId) => await Trip.findById({ _id : tripId }).populate({ path: 'buddies' });

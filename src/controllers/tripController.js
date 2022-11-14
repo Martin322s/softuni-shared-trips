@@ -51,6 +51,9 @@ router.get('/details/:tripId', async (req, res) => {
     const mapped = trip.buddies.map(x => x.toString());
     const isJoined = mapped.includes(req.user);
     const buddiesCount = trip.buddies.length;
+    const buddies = await tripService.getAllPassagers(tripId);
+    const emails = buddies.buddies.map(x => x.email).join(', ');
+    console.log(emails);
     res.render('trips/trip-details', {
         _id: trip._id,
         startPoint: trip.startPoint,
@@ -66,7 +69,8 @@ router.get('/details/:tripId', async (req, res) => {
         creator: isOwner,
         aviableSeats: trip.seats > 0,
         isJoined: isJoined,
-        buddiesCount: buddiesCount > 0
+        buddiesCount: buddiesCount > 0,
+        emails: emails
     });
 });
 
@@ -101,9 +105,8 @@ router.post('/details/:tripId/edit', async (req, res) => {
 
 router.get('/details/:tripId/join', async (req, res) => {
     const tripId = req.params.tripId;
-    const user = req.user;
     const trip = await tripService.getOne(tripId);
-    await tripService.joinTrip(tripId, user);
+    await tripService.joinTrip(tripId, req.user);
     const seats = Number(trip.seats) - 1;
     await tripService.editSeats(tripId, seats);
     res.redirect(`/trips/details/${tripId}`);

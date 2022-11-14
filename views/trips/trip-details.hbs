@@ -16,11 +16,13 @@
                 <i class="fas fa-users buddies"></i>
                 <h5>Shared trip Buddies</h5>
                 <div>
-                    {{#if buddiesCount}}
-                    <p>peter@abv.bg, marry@abv.bg</p>
-
-                    <!-- If not display: -->
-                    <p>there are no buddies yet...</p>
+                    {{#if emails}}
+                        {{#each emails}}
+                            <p>{{email}}</p>
+                        {{/each}}
+                    {{else}}
+                        <p>there are no buddies yet...</p>
+                    {{/if}}
                 </div>
                 <h5>Driver: <span>{{owner}}</span> </h5>
             </div>
