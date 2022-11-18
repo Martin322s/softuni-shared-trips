@@ -1,28 +1,36 @@
 {
-	"name": "shared-trip",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"engines": {
-		"node": "14.x"
-	},
-	"scripts": {
-		"start": "nodemon ./src/index.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"bcrypt": "^5.1.0",
-		"cookie-parser": "^1.4.6",
-		"express": "^4.18.1",
-		"express-handlebars": "^6.0.6",
-		"express-validator": "^6.14.2",
-		"git": "^0.1.5",
-		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^6.6.5"
-	},
-	"devDependencies": {
-		"nodemon": "^2.0.20"
-	}
+  "name": "shared-trip",
+  "version": "1.0.0",
+  "description": "JS Back-end Educational Project",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-validator": "^6.14.2",
+    "git": "^0.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaRtin322s/softuni-shared-trips.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MaRtin322s/softuni-shared-trips/issues"
+  },
+  "homepage": "https://github.com/MaRtin322s/softuni-shared-trips#readme"
 }
