@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const router = require('./router');
 const { auth } = require('./middlewares/authMiddleware');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 initViewEngine(app);
 app.use('/static', express.static('public'));
