@@ -92,3 +92,9 @@ Note: When a user joins a given trip, a reference to that user is added to that 
 **Description:** The Logout action is available to logged-in users. Upon successful logout, any session information is cleared, and the user is redirected to the Home Page.
 
 ---
+
+## Shared Trips (For Logged In Users and Logged Out Users)
+
+**Description:** The Shared Trips page displays a list of all shared trips in the system. Each trip is represented with information such as car image, destination (from - to), date, time, and price. Users can click the [Details] button to access trip details.
+
+---
