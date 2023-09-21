@@ -32,7 +32,7 @@ The Functional Requirements describe the functionality that the Application must
   - Join some trip (if the current user is not the trip creator and if seats available)
   - Delete or Edit a trip depending on the user's authentication (only for the creator of the current trip)
  
-  ## Database Models
+## Database Models
 
 The Database of the Shared Trip application needs to support 2 entities:
 
@@ -60,3 +60,16 @@ Note: When a user creates a new trip, a reference to that trip is added to that 
 - Buddies – a collection of Users (reference to the User model)
 
 Note: When a user joins a given trip, a reference to that user is added to that collection (Buddies).
+
+# Application Pages
+
+## Home Page (Logged Out User)
+
+**Description:** The Home Page serves as the landing page for users who are not logged in. It provides information about the application and offers navigation options.
+
+---
+
+## Home Page (Logged In User)
+
+**Description:** The Home Page for logged-in users provides a welcoming interface and access to the main application features.
+
