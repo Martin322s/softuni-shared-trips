@@ -104,3 +104,9 @@ Note: When a user joins a given trip, a reference to that user is added to that 
 **Description:** The Trip Details Page allows both logged-in and logged-out users to view detailed information about a trip. The page displays information such as destination, date and time, shared trip buddies, car brand, car image, description, and price. Buttons are displayed based on the user's status, allowing actions like joining the trip, editing the trip (for the trip creator), and deleting the trip (for the trip creator).
 
 ---
+
+## Join Trip (Logged In User, Not the Current Trip Creator)
+
+**Description:** Logged-in users who are not the trip creators can join trips (if seats are available). If successful, their email is added to the trip's shared trip buddies collection, and the available seats are decreased by 1. Users are then redirected to the Trip Details Page for the current trip. If a user has already joined the trip, a message indicating "Already joined. Don't be late!" is displayed. If no seats are available, a message indicating "No seats available!" is displayed.
+
+---
