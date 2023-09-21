@@ -21,3 +21,13 @@ The Functional Requirements describe the functionality that the Application must
   - View the Details page
 
 ### Users (logged in)
+
+#### User navigation example:
+
+- The application should provide Users (logged in) with the functionality to:
+  - View the home page and all other pages with logged-in navigation
+  - View all shared trips
+  - Create a new trip [Offer Trip]
+  - Access trip details page [Details]
+  - Join some trip (if the current user is not the trip creator and if seats available)
+  - Delete or Edit a trip depending on the user's authentication (only for the creator of the current trip)
