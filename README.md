@@ -116,3 +116,9 @@ Note: When a user joins a given trip, a reference to that user is added to that 
 **Description:** The Offer New Trip Page is available to logged-in users, allowing them to create a new trip by filling out a form. Upon successful creation, users are redirected to the Shared Trips page.
 
 ---
+
+## Delete Trip (Logged In User, Creator of the Current Trip)
+
+**Description:** Trip creators can delete their own trips. Clicking the [Delete this trip] button removes the trip from the database, and the user is redirected to the Shared Trips Page.
+
+---
