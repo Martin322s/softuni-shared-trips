@@ -31,3 +31,17 @@ The Functional Requirements describe the functionality that the Application must
   - Access trip details page [Details]
   - Join some trip (if the current user is not the trip creator and if seats available)
   - Delete or Edit a trip depending on the user's authentication (only for the creator of the current trip)
+ 
+  ## Database Models
+
+The Database of the Shared Trip application needs to support 2 entities:
+
+### User
+
+- Email - string (required)
+- Password - string (required)
+- Gender – string (male or female) required
+- Trips History – a collection of Trips (reference to the Trip Model)
+
+Note: When a user creates a new trip, a reference to that trip is added to that collection (Trips History).
+
