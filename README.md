@@ -73,3 +73,10 @@ Note: When a user joins a given trip, a reference to that user is added to that 
 
 **Description:** The Home Page for logged-in users provides a welcoming interface and access to the main application features.
 
+---
+
+## Register Page (Logged Out User)
+
+**Description:** The Register Page allows users who are not logged in to create a new account by providing their email, password, and gender. Passwords are hashed and should match.
+
+---
