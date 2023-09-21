@@ -98,3 +98,9 @@ Note: When a user joins a given trip, a reference to that user is added to that 
 **Description:** The Shared Trips page displays a list of all shared trips in the system. Each trip is represented with information such as car image, destination (from - to), date, time, and price. Users can click the [Details] button to access trip details.
 
 ---
+
+## Trip Details Page (For Logged In Users and Logged Out Users)
+
+**Description:** The Trip Details Page allows both logged-in and logged-out users to view detailed information about a trip. The page displays information such as destination, date and time, shared trip buddies, car brand, car image, description, and price. Buttons are displayed based on the user's status, allowing actions like joining the trip, editing the trip (for the trip creator), and deleting the trip (for the trip creator).
+
+---
