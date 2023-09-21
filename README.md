@@ -45,3 +45,18 @@ The Database of the Shared Trip application needs to support 2 entities:
 
 Note: When a user creates a new trip, a reference to that trip is added to that collection (Trips History).
 
+### Trip
+
+- Start Point - string (required)
+- End Point – string (required)
+- Date – string (required)
+- Time – string (required)
+- Car Image – string (required)
+- Car Brand – string (required)
+- Seats – number (required)
+- Price – number (required)
+- Description – string (required)
+- Creator – object Id (reference to the User model)
+- Buddies – a collection of Users (reference to the User model)
+
+Note: When a user joins a given trip, a reference to that user is added to that collection (Buddies).
