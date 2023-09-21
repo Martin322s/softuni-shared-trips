@@ -80,3 +80,15 @@ Note: When a user joins a given trip, a reference to that user is added to that 
 **Description:** The Register Page allows users who are not logged in to create a new account by providing their email, password, and gender. Passwords are hashed and should match.
 
 ---
+
+## Login Page (Logged Out User)
+
+**Description:** The Login Page allows users who are not logged in to log in with their registered email and password.
+
+---
+
+## Logout (Logged In User)
+
+**Description:** The Logout action is available to logged-in users. Upon successful logout, any session information is cleared, and the user is redirected to the Home Page.
+
+---
