@@ -122,3 +122,7 @@ Note: When a user joins a given trip, a reference to that user is added to that 
 **Description:** Trip creators can delete their own trips. Clicking the [Delete this trip] button removes the trip from the database, and the user is redirected to the Shared Trips Page.
 
 ---
+
+## Edit Trip (Logged In User, Creator of the Current Trip)
+
+**Description:** The Edit Trip Page is available to logged-in users who are the creators of the current trip. Clicking the [Edit this trip] button on the Trip Details Page allows users to edit the trip's details. Upon successful editing, users are redirected to the Trip Details Page for the updated trip.
